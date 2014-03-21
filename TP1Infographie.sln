@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TP1Infographie", "TP1Infographie\TP1Infographie.vcxproj", "{CEBC623C-D3A2-44DB-8A36-DA9B9159A4A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEBC623C-D3A2-44DB-8A36-DA9B9159A4A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CEBC623C-D3A2-44DB-8A36-DA9B9159A4A1}.Debug|Win32.Build.0 = Debug|Win32
+		{CEBC623C-D3A2-44DB-8A36-DA9B9159A4A1}.Release|Win32.ActiveCfg = Release|Win32
+		{CEBC623C-D3A2-44DB-8A36-DA9B9159A4A1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
