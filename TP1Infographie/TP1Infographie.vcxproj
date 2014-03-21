@@ -60,19 +60,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\programmation\Programmes\C++\AssignemetRT3D\Project\RT3DAssignement\Mesh.h" />
-    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\ObjLoader.h" />
-    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\ShaderManager.h" />
-    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Tools.h" />
-    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\TPMain.h" />
+    <ClInclude Include="rt3d.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="ObjLoader.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="Tools.h" />
+    <ClInclude Include="TPMain.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\programmation\Programmes\C++\AssignemetRT3D\Project\RT3DAssignement\Mesh.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\main.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\ObjLoader.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\ShaderManager.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Tools.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\TPMain.cpp" />
+    <ClCompile Include="rt3d.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjLoader.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="Tools.cpp" />
+    <ClCompile Include="TPMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
