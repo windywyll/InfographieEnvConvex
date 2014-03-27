@@ -3,8 +3,6 @@
 
 using namespace std;
 
-namespace rt3d {
-
 // struct vaoBuffers will be used inside the rt3d library
 // clients should not need to know about this data structure
 struct vaoBuffers {
@@ -307,7 +305,5 @@ void updateMesh(const GLuint mesh, const unsigned int bufferType, const GLfloat 
 	pMeshBuffers[RT3D_VERTEX] = VBO;
 
 	glBindVertexArray(0);
-
-}
 
 } // namespace rt3d

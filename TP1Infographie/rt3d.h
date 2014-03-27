@@ -13,8 +13,6 @@
 #define RT3D_TEXCOORD   3
 #define RT3D_INDEX		4
 
-namespace rt3d {
-
 	struct lightStruct {
 		//GLfloat ambient[4]; set ambient for the entire scene and not one light
 		GLfloat diffuse[4];
@@ -56,6 +54,5 @@ namespace rt3d {
 	void drawIndexedMesh(const GLuint mesh, const GLuint indexCount, const GLuint primitive);
 
 	void updateMesh(const GLuint mesh, const unsigned int bufferType, const GLfloat *data, const GLuint size);
-}
 
 #endif

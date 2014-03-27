@@ -60,6 +60,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Tetraedre.h" />
+    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Triangle.h" />
     <ClInclude Include="rt3d.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="ObjLoader.h" />
@@ -68,6 +70,8 @@
     <ClInclude Include="TPMain.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Tetraedre.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Triangle.cpp" />
     <ClCompile Include="rt3d.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="main.cpp" />

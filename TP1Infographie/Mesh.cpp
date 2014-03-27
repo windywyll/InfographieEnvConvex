@@ -1,6 +1,7 @@
 #include "Mesh.h"
-#include "rt3dObjLoader.h"
+#include "ObjLoader.h"
 #include <vector>
+#include "rt3d.h"
 
 using namespace std;
 
@@ -13,12 +14,7 @@ Mesh::Mesh()
 }
 
 Mesh::~Mesh()
-{
-	//if(m_vertices != NULL)
-		//delete [] m_vertices; //seems to not work
-	//if(m_faces != NULL)
-		//delete [] m_faces; //seems to not work
-}
+{}
 
 void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* normals, GLfloat* texcoords, GLuint indexCount, GLuint* indices)
 {
@@ -28,7 +24,7 @@ void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* n
 	memcpy(m_faces,indices,indexCount*sizeof(unsigned int));
 	m_numFaces = indexCount;
 	m_numVertices = numVerts;
-	m_ID = rt3d::createMesh(numVerts, vertices, colours, normals, texcoords, indexCount, indices);
+	m_ID = createMesh(numVerts, vertices, colours, normals, texcoords, indexCount, indices);
 }
 
 void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* normals,GLfloat* texcoords)
@@ -36,7 +32,7 @@ void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* n
 	m_vertices = new float[numVerts*3];
 	memcpy(m_vertices,vertices,numVerts*3*sizeof(float));
 	m_numVertices = numVerts;
-	m_ID = rt3d::createMesh(numVerts, vertices, colours, normals,texcoords);
+	m_ID = createMesh(numVerts, vertices, colours, normals,texcoords);
 }
 
 void Mesh::init(GLuint numVerts, GLfloat* vertices)
@@ -44,15 +40,15 @@ void Mesh::init(GLuint numVerts, GLfloat* vertices)
 	m_vertices = new float[numVerts*3];
 	memcpy(m_vertices,vertices,numVerts*3*sizeof(float));
 	m_numVertices = numVerts;
-	m_ID = rt3d::createMesh(numVerts, vertices);
+	m_ID = createMesh(numVerts, vertices);
 }
 
 void Mesh::draw()
 {
 	if(m_faces != NULL)
-		rt3d::drawIndexedMesh(m_ID, m_numFaces, GL_TRIANGLES);
+		drawIndexedMesh(m_ID, m_numFaces, GL_TRIANGLES);
 	else
-		rt3d::drawMesh(m_ID, m_numVertices, GL_TRIANGLES); 
+		drawMesh(m_ID, m_numVertices, GL_TRIANGLES); 
 }
 
 void Mesh::loadFromObjFile(const char* filename)
@@ -64,7 +60,7 @@ void Mesh::loadFromObjFile(const char* filename)
 	vector<GLfloat> norms;
 	vector<GLfloat> tex_coords;
 	vector<GLuint> indices;
-	rt3d::loadObj(streamName.str().c_str(), verts, norms, tex_coords, indices);
+	loadObj(streamName.str().c_str(), verts, norms, tex_coords, indices);
 	init(verts.size()/3, verts.data(), nullptr, norms.data(), tex_coords.data(), indices.size(), indices.data());
 }
 
@@ -86,4 +82,29 @@ float *Mesh::getVertices()
 unsigned int *Mesh::getFaces()
 {
 	return m_faces;
+}
+
+Mesh Mesh::getAlphaShape()
+{
+	Mesh alphaShape = Mesh();
+	alphaShape.m_vertices = m_vertices;
+	alphaShape.m_numVertices = m_numVertices;
+
+
+	return alphaShape;
+}
+
+void Mesh::generateAllTetraedreForAlphaShape(std::priority_queue<Tetraedre> *tetraedreList)
+{
+	for(GLuint i = 0; i < m_numVertices-2; i++)
+		for(GLuint j = i+1; j < m_numVertices-1; j++)
+			for(GLuint k = j+1; k < m_numVertices; k++)
+			{
+				tetraedreList.push(getHigherLambdaOfTriangle(i, j, k));
+			}
+}
+
+Tetraedre getHigherLambdaOfTriangle(GLuint p1, GLuint p2, GLuint p3)
+{
+
 }
