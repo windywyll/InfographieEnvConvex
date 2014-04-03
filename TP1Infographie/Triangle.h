@@ -5,28 +5,32 @@
 #include <iostream>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <vector>
 
 class Triangle
 {
 public:
 	Triangle(){m_vertices = glm::mat3(0.0);}
-	Triangle(GLfloat *vertices){setVertices(vertices);}
-	Triangle(glm::mat3 vertices){setVertices(vertices);}
+	Triangle(std::vector<GLuint> pointID, GLfloat *vertices){setVertices(pointID, vertices);}
+	Triangle(std::vector<GLuint> pointID, glm::mat3 vertices){setVertices(pointID, vertices);}
 	~Triangle(){}
 
 	
-	void setVertices(GLfloat *vertices){if(vertices != NULL) {m_vertices = glm::mat3(vertices[0],vertices[1],vertices[2],vertices[3],vertices[4],vertices[5],vertices[6],vertices[7],vertices[8]); computeCircleCenter();}}
-	void setVertices(glm::mat3 vertices){m_vertices = vertices; computeCircleCenter();}
+	void setVertices(std::vector<GLuint> pointID, GLfloat *vertices = nullptr);
+	void setVertices(std::vector<GLuint> pointID, glm::mat3 vertices);
 	GLfloat *getVertices(){return glm::value_ptr(m_vertices);}
 	glm::mat3 getVerticesMatrix(){return m_vertices;}
 	glm::vec3 getCircleCenter(){return m_circleCenter;}
 	glm::vec3 getNormal(){return m_normal;}
+	std::vector<GLuint> getPointsRef(){return m_pointID;}
 
 private:
+	std::vector<GLuint> m_pointID;
 	glm::mat3 m_vertices;
 	glm::vec3 m_circleCenter;
 	glm::vec3 m_normal;
 
+	//fonctions pour calculer le centre du cercle circonscrit au triangle
 	void computeCircleCenter();
 	void computeNormal();
 	glm::mat2x3 computePerpendicularBisector(GLuint p1, GLuint p2);

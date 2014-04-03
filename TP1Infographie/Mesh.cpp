@@ -43,7 +43,7 @@ void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* n
 		memcpy(m_faces,indices,indexCount*sizeof(GLuint));
 	}
 	
-	m_ID = createMesh(numVerts, vertices, colours, normals, texcoords, indexCount, indices);
+	//m_ID = createMesh(numVerts, vertices, colours, normals, texcoords, indexCount, indices);
 }
 
 void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* normals,GLfloat* texcoords)
@@ -67,7 +67,7 @@ void Mesh::draw()
 void Mesh::loadFromObjFile(const char* filename)
 {
 	stringstream streamName;
-	streamName << "Models\\" << filename;
+	streamName << filename;
 
 	vector<GLfloat> verts;
 	vector<GLfloat> norms;

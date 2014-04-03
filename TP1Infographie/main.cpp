@@ -1,14 +1,9 @@
-﻿//#include <SDL.h>
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 
 #include "Mesh.h"
 #include "ObjLoader.h"
 #include "AlphaShape.h"
-
-#if _DEBUG
-#pragma comment(linker, "/subsystem:\"console\" /entry:\"WinMainCRTStartup\"")
-#endif
 
 using namespace std;
 

@@ -5,7 +5,6 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <SDL.h>
 #include <string>
 #include <sstream>
 #include <queue>
