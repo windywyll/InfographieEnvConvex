@@ -21,22 +21,19 @@
     <ClInclude Include="ObjLoader.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ShaderManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tools.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="TPMain.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="rt3d.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Triangle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Tetraedre.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\ListOfTriangleFromPoint.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="tools.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\AlphaShape.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,22 +47,16 @@
     <ClCompile Include="ObjLoader.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Tools.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="TPMain.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="rt3d.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Triangle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\Tetraedre.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="tools.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\AlphaShape.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

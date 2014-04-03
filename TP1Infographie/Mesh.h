@@ -9,8 +9,10 @@
 #include <string>
 #include <sstream>
 #include <queue>
+#include <vector>
 
 #include "Tetraedre.h"
+#include "Triangle.h"
 
 class Mesh{
 private:
@@ -19,6 +21,8 @@ private:
 	unsigned int m_numVertices;
 	GLfloat *m_vertices;
 	GLuint *m_faces;
+	GLfloat *m_normals;
+	GLfloat *m_textCoord;
 
 public:
 	Mesh();
@@ -30,17 +34,12 @@ public:
 	void loadFromObjFile(const char* filename);
 	void draw();
 
-	unsigned int getNumFaces();
-	unsigned int getNumVertices();
-	float *getVertices();
-	unsigned int *getFaces();
-	GLuint getID();
-
-	Mesh getAlphaShape();
-
-	//private function for alpha shape
-private:
-	void Mesh::generateAllTetraedreForAlphaShape(std::priority_queue<Tetraedre> * tetraedreList);
-	Tetraedre getHigherLambdaOfTriangle(GLuint p1, GLuint p2, GLuint p3);
+	GLuint getNumFaces(){return m_numFaces;}
+	GLuint getNumVertices(){return m_numVertices;}
+	GLfloat *getVertices(){return m_vertices;}
+	GLuint *getFaces(){return m_faces;}
+	GLfloat *getNormals(){return m_normals;}
+	GLfloat *getTexCoords(){return m_textCoord;}
+	GLuint getID(){return m_ID;}
 };
 #endif

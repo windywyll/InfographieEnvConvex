@@ -15,7 +15,7 @@ public:
 	~Triangle(){}
 
 	
-	void setVertices(GLfloat *vertices){if(vertices != NULL) {m_vertices = glm::mat3(vertices); computeCircleCenter();}}
+	void setVertices(GLfloat *vertices){if(vertices != NULL) {m_vertices = glm::mat3(vertices[0],vertices[1],vertices[2],vertices[3],vertices[4],vertices[5],vertices[6],vertices[7],vertices[8]); computeCircleCenter();}}
 	void setVertices(glm::mat3 vertices){m_vertices = vertices; computeCircleCenter();}
 	GLfloat *getVertices(){return glm::value_ptr(m_vertices);}
 	glm::mat3 getVerticesMatrix(){return m_vertices;}

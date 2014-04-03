@@ -39,7 +39,7 @@ GLuint ShaderManager::getShader(char *vertName,char *fragName)
 		stringstream streamVert, streamFrag;
 		streamVert << "Shaders\\" <<vertName;
 		streamFrag << "Shaders\\" <<fragName;
-		GLuint newShader = rt3d::initShaders(streamVert.str().c_str(), streamFrag.str().c_str());
+		GLuint newShader = initShaders(streamVert.str().c_str(), streamFrag.str().c_str());
 		s_existingsShaders.insert(map<GLuint,string>::value_type(newShader,shaderConcatenedName));
 		return newShader;
 	}

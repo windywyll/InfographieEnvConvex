@@ -8,7 +8,7 @@
 
 #include <GL/glew.h>
 
-#include "rt3d.h"
+#include "tools.h"
 
 class ShaderManager
 {
