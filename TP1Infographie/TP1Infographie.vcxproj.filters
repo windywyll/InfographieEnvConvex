@@ -21,16 +21,19 @@
     <ClInclude Include="ObjLoader.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="ShaderManager.h">
+    <ClInclude Include="tools.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Tools.h">
+    <ClInclude Include="AlphaShape.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="TPMain.h">
+    <ClInclude Include="ListOfTriangleFromPoint.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="rt3d.h">
+    <ClInclude Include="Tetraedre.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="EnveloppeConvexe.h">
@@ -47,16 +50,16 @@
     <ClCompile Include="ObjLoader.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderManager.cpp">
+    <ClCompile Include="tools.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Tools.cpp">
+    <ClCompile Include="AlphaShape.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="TPMain.cpp">
+    <ClCompile Include="Tetraedre.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="rt3d.cpp">
+    <ClCompile Include="Triangle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="EnveloppeConvexe.cpp">

@@ -9,9 +9,10 @@
 // Does not support anything other than very straightforward OBJ models
 // Will not generate normals if the model is missing them - or any other missing data
 #include "ObjLoader.h"
-#include "Tools.h"
+#include "tools.h"
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include <map>
 
 #define FORMAT_UNKNOWN 0
@@ -110,7 +111,7 @@ void loadObj(const char* filename, std::vector<GLfloat> &verts, std::vector<GLfl
 	std::vector<GLfloat> &texcoords, std::vector<GLuint> &indices) {
 
 	GLint fileLength;
-	char *fileSource = loadFile(filename);
+	char *fileSource = loadFile(filename, fileLength);
 
 	if (fileLength == 0)
 		// should report error here too
@@ -201,4 +202,34 @@ void loadObj(const char* filename, std::vector<GLfloat> &verts, std::vector<GLfl
 	std::cout << "finished parsing obj image..." << std::endl;
 
 
+}
+
+void saveMesh(const char* filename, Mesh & mesh)
+{
+	std::ofstream file(filename);
+	if (file.is_open())
+	{
+		file << "o " << filename << std::endl;
+		GLfloat *vertices = mesh.getVertices();
+		if(vertices != nullptr)
+		for(GLuint i = 0; i < mesh.getNumVertices(); i++)
+			file << "v "  << vertices[i*3] << " " << vertices[i*3+1]<< " " << vertices[i*3+2]<< std::endl;
+		
+		GLfloat *normals = mesh.getNormals();
+		if(normals != nullptr)
+		for(GLuint i = 0; i < mesh.getNumVertices(); i++)
+			file << "vn "  << normals[i*3] << " " << normals[i*3+1]<< " " << normals[i*3+2]<< std::endl;
+
+		GLfloat *texCoord = mesh.getTexCoords();
+		if(texCoord != nullptr)
+		for(GLuint i = 0; i < mesh.getNumVertices(); i++)
+			file << "vt "  << texCoord[i*2] << " " << texCoord[i*2+1] << std::endl;
+
+		GLuint *faces = mesh.getFaces();
+		if(faces != nullptr)
+		for(GLuint i = 0; i < mesh.getNumFaces(); i++)
+			file << "v "  << faces[i*2] << " " << faces[i*2+1] << std::endl;
+	}
+	else
+		std::cout << "impossible to open file : "<< filename << std::endl;
 }

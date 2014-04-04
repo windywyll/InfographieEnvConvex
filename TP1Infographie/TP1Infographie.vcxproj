@@ -41,9 +41,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>D:\tout et n%27importe quoi\programmation\Bibliothèques\glm-0.9.3.4;D:\tout et n%27importe quoi\programmation\Bibliothèques\SDL-2.0.0\include;D:\tout et n%27importe quoi\programmation\Bibliothèques\glew-1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\tout et n%27importe quoi\programmation\Bibliothèques\SDL plugins\lib\x64;D:\tout et n%27importe quoi\programmation\Bibliothèques\SDL-2.0.0\lib;D:\tout et n%27importe quoi\programmation\Bibliothèques\glew-1.7.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -60,23 +64,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AlphaShape.h" />
     <ClInclude Include="EnveloppeConvexe.h" />
-    <ClInclude Include="rt3d.h" />
+    <ClInclude Include="ListOfTriangleFromPoint.h" />
+    <ClInclude Include="Tetraedre.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="tools.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="ObjLoader.h" />
-    <ClInclude Include="ShaderManager.h" />
-    <ClInclude Include="Tools.h" />
-    <ClInclude Include="TPMain.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlphaShape.cpp" />
     <ClCompile Include="EnveloppeConvexe.cpp" />
-    <ClCompile Include="rt3d.cpp" />
+    <ClCompile Include="Tetraedre.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="tools.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjLoader.cpp" />
-    <ClCompile Include="ShaderManager.cpp" />
-    <ClCompile Include="Tools.cpp" />
-    <ClCompile Include="TPMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

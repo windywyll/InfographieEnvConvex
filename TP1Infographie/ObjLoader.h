@@ -8,15 +8,17 @@
 // Does not support groups or multiple meshes per file
 // Does not support anything other than very straightforward OBJ models
 // Will not generate normals if the model is missing them - or any other missing data
-#ifndef RT3D_OBJ_LOADER
-#define RT3D_OBJ_LOADER
+#ifndef OBJ_LOADER
+#define OBJ_LOADER
 
 #include <GL/glew.h>
 #include <vector>
 
+#include "Mesh.h"
 
 void loadObj(const char* filename, std::vector<GLfloat> &verts, std::vector<GLfloat> &norms, 
 	std::vector<GLfloat> &texcoords, std::vector<GLuint> &indices);
 
+void saveMesh(const char* filename,Mesh & mesh);
 
 #endif
