@@ -30,7 +30,10 @@
     <ClInclude Include="TPMain.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\rt3d.h">
+    <ClInclude Include="rt3d.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="EnveloppeConvexe.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,7 +56,10 @@
     <ClCompile Include="TPMain.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\tout et n%27importe quoi\travail\M1 STIC ISC\821 Infographie\TP1Infographie\TP1Infographie\rt3d.cpp">
+    <ClCompile Include="rt3d.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EnveloppeConvexe.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

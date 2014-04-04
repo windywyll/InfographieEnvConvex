@@ -8,6 +8,7 @@
 #include <SDL.h>
 #include <string>
 #include <sstream>
+#include <vector>
 
 class Mesh{
 	private:

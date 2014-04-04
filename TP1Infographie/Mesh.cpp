@@ -87,3 +87,4 @@ unsigned int *Mesh::getFaces()
 {
 	return m_faces;
 }
+
