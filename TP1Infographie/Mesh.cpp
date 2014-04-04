@@ -24,7 +24,7 @@ void Mesh::init(GLuint numVerts, GLfloat* vertices, GLfloat* colours, GLfloat* n
 	{
 		m_vertices = new GLfloat[numVerts*3];
 		memcpy(m_vertices,vertices,numVerts*3*sizeof(GLfloat));
-	}
+}
 	if(normals != nullptr)
 	{
 		m_normals = new GLfloat[numVerts*3];
@@ -76,3 +76,4 @@ void Mesh::loadFromObjFile(const char* filename)
 	loadObj(streamName.str().c_str(), verts, norms, tex_coords, indices);
 	init(verts.size()/3, verts.data(), nullptr, norms.data(), tex_coords.data(), indices.size(), indices.data());
 }
+

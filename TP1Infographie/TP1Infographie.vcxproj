@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AlphaShape.h" />
+    <ClInclude Include="EnveloppeConvexe.h" />
     <ClInclude Include="ListOfTriangleFromPoint.h" />
     <ClInclude Include="Tetraedre.h" />
     <ClInclude Include="Triangle.h" />
@@ -74,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AlphaShape.cpp" />
+    <ClCompile Include="EnveloppeConvexe.cpp" />
     <ClCompile Include="Tetraedre.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="tools.cpp" />
