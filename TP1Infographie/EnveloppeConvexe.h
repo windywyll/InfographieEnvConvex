@@ -15,17 +15,20 @@
 class EnveloppeConvexe{
 	private:
 		GLfloat *m_vertices;
-		std::vector<GLfloat*> m_faces;
-		std::vector<GLfloat*> m_edges;
+		GLuint num_vertices;
+		std::vector<GLuint> m_faces;
+		std::vector<GLfloat> m_edges;
 
 	public:
 		EnveloppeConvexe();
 		~EnveloppeConvexe();
 
-		void calculateVolume(GLfloat *points);
+		void loadFile(std::string filename);
+		void calculateVolume();
 		void add_edges(glm::vec3 p1,glm::vec3 p2);
 		void filter(glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 pTest);
-
-}
+		void displayTriangles();
+		void printObj(std::string filename);
+};
 
 #endif
